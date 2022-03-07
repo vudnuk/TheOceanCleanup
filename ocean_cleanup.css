@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&family=EB+Garamond:wght@400;700&family=Special+Elite&display=swap');
+
+/* Page variables */
+html {
+    /* Modular scale
+     * Referenced from https://ncl.instructure.com/courses/39922/pages/demonstration-material?module_item_id=1999432
+     * Original author: Harold Fellermann 
+     */
+    --factor: 1.5;
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--factor));
+    --s2: calc(var(--s1) * var(--factor));
+    --s3: calc(var(--s2) * var(--factor));
+    --s4: calc(var(--s3) * var(--factor));
+    --s5: calc(var(--s4) * var(--factor));
+    --s-1: calc(var(--s0) / var(--factor));
+    --s-2: calc(var(--s-1) / var(--factor));
+    --s-3: calc(var(--s-2) / var(--factor));
+    --s-4: calc(var(--s-3) / var(--factor));
+    --s-5: calc(var(--s-4) / var(--factor));
+}
+
+/**** Page layout ****/
+/* Overflow to avoid scroll bar */
+html, body {
+    overflow-x: hidden;
+}
+
+header, nav, footer {
+    text-align: center;
+}
+
+body {
+    margin: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: var(--s-2);
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li ul {
+    display: none;
+}
+
+nav ul li a {
+    padding: var(--s2);
+    padding-top: var(--s-2);
+    padding-bottom: var(--s-2);
+}
+
+section {
+    padding: var(--s-1);
+    margin: auto;
+    max-width: 80ch;
+}
+
+h3 {
+    padding-top: var(--s0);
+}
+
+footer {
+    padding: var(--s2);
+}
+
+/* Layout changes to provide responsive scaling */
+@media screen and (max-width: 850px) {
+    html {
+        --factor: 1.4;
+    }
+
+    h1 {
+        padding-bottom: var(--s3);
+        padding-top: var(--s3);
+    }
+
+    nav ul li a {
+        display: block;
+        padding: var(--s-1);
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    footer {
+        padding: var(--s5);
+    }
+}
+
+/**** Colour, font, images ****/
+
+/* Fonts */
+h1, nav, footer {
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+h2, h3, figcaption {
+    font-family: 'Special Elite', cursive;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+}
+
+
+h1 {
+    font-size: var(--s4);
+}
+
+blockquote {
+    font-size: var(--s2);
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+}
+
+/* Font resizing for responsive scaling */
+
+@media screen and (max-width: 850px) {
+    h1 {
+        font-size: 12vw; 
+    }
+
+    nav ul li a {
+        font-size: var(--s1);
+    }
+
+    body {
+        font-size: var(--s1)
+    }
+
+    blockquote {
+        font-size: var(--s3);
+    }
+
+    footer p {
+        font-size: var(--s1);
+    }
+}
+
+
+/* Background */
+body {
+    background: url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg") bottom fixed;
+}
+
+main {
+    background-color: white;
+}
+
+nav ul {
+    background-color: #00000066;
+}
+
+nav ul li a:hover {
+    background-color: #ffffffc0;
+    color: #00878b;
+}
+
+
+
+/* Text colours/decoration */
+
+/* nowrap on h1 to stop overflow and keep "logo" appearance */
+h1 {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0.05em 0.05em 0.080em #00000094;
+    white-space: nowrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+blockquote {
+    color: #019ca0;
+}
+
+section {
+    text-align: left;
+}
+
+footer p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+footer p a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Element appearance */
+
+iframe {
+    width: -webkit-fill-available;
+}
+
+caption {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    font-weight: 700;
+}
+
+table {
+    border-bottom: solid black 2px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+tr {
+    border-bottom: solid black 1px;
+}
+
+/* Styling for polaroid image effect */
+figure {
+    background-color: white;
+    padding: var(--s-2);
+    box-shadow: 9px 9px 18px #80808098;
+    border: 1px solid #80808098;
+    border-radius: 1%;
+}
+
+img {
+    max-width: 100%;
+}
+
+figcaption {
+    padding-top: var(--s1);
+    color: grey;
+    text-align: right;
+    font-size: 80%;
+
+}
+
+/**** Specific styles ****/
+#sec_summary h2 {
+    display: none;    
+}
+
+/* #header1 and #header2 IDs allow for varying styles in h1 */
+
+#header1 {
+    font-size: 40%;
+    font-weight: 400;
+    vertical-align: super;
+    margin-right: -0.18em;
+}
+
+#header2 {
+    font-weight: 400;
+    margin-right: -0.18em;
+}
+
+/* Specific styling for polaroid image effect 
+* floatLeft and floatRight classes allow <p> text in <section> wrap around and not overlap.
+*/
+
+.floatLeft {
+    float: left;
+    transform: rotate(357deg);
+    margin-left: auto;
+    margin-right: var(--s2);
+    width: 48%;
+}
+
+.floatRight {
+    float: right;
+    transform: rotate(3deg);
+    margin-right: auto;
+    margin-left: var(--s1);
+}
+
+#boyanSlat {
+    width: 33%;
+}
+
+#interceptor {
+    width: 43%;
+}
+
+@media screen and (max-width: 700px) {
+    /* Float effect and specific image sizing are removed for smaller screen sizes */
+    .floatLeft {
+        float: none;
+        width: auto;
+        margin: auto;
+      }
+  
+      .floatRight {
+        float: none;
+        width: auto;
+        margin: auto;
+      }
+  
+      #boyanSlat {
+          width: auto;
+      }
+  
+      #interceptor {
+          width: auto;
+      }
+}

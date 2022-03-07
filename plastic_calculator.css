@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&family=EB+Garamond:wght@400;700&family=Special+Elite&display=swap');
+
+/* Page layout */
+
+main {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 2%;
+    width: 60vw;
+}
+
+table {
+    margin: auto;
+}
+
+footer {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+    tr td { 
+        display: block;
+        padding-top: 0.5rem;
+      }
+}
+
+/*** Fonts, colours, background and text styling ***/
+
+/* Fonts */
+
+h1, footer {
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+h2 {
+    font-family: 'Special Elite', cursive;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+}
+
+/* Background */
+
+body {
+    background: url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg") fixed;
+}
+
+/* Text styling */
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 0.05em 0.05em 0.080em #00000094;
+    text-align: center;
+}
+
+footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+td {
+    text-align: justify;    
+ }
+
+ main {
+    text-align: center;
+}
+
+main {
+    background-color: white;
+}
+
+
