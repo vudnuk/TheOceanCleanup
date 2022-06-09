@@ -150,7 +150,7 @@ nav ul li a {
 
 /* Background */
 body {
-    background: url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg") bottom fixed;
+    background: url("Images/ocean.jpg") bottom fixed;
 }
 
 main {
